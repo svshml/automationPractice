@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1644543457235' stop='1644543467866'>
+    <name>Elements</name>
+    <title>Elements</title>
+    <test-cases>
+        <test-case start='1644543457237' status='broken' stop='1644543467864'>
+            <name>open Elements</name>
+            <title>open Elements</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-98.0.4758.82'/>
+            </parameters>
+            <steps>
+                <step start='1644543457252' status='passed' stop='1644543463318'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='142cb140-4e85-40e3-960f-42601a404f6d-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644543463319' status='broken' stop='1644543467864'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='ea67122a-05d3-4a44-a3ad-9b875cf3010f-attachment.json' type='application/json' size='66'/>
+                    </attachments>
+                    <steps>
+                        <step start='1644543463324' status='passed' stop='1644543463345'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='5c80221d-1846-4f7f-bea8-11dcba823b5c-attachment.json' type='application/json' size='66'/>
+                                <attachment title='Response' source='93ac3ab8-bfcd-4f2a-84bb-6b7724377eef-attachment.json' type='application/json' size='83'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1644543463353' status='passed' stop='1644543463362'>
+                            <name>POST /session/:sessionId/element/7c301aba-c219-4fed-ab80-d9c7ef3b7bad/click</name>
+                            <title>POST /session/:sessionId/element/7c301aba-c219-4fed-ab80-d9c7ef3b7bad/click</title>
+                            <attachments>
+                                <attachment title='Response' source='5eba438f-d75d-4154-bc46-3f2c8f95b247-attachment.json' type='application/json' size='83'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                        <step start='1644543467715' status='passed' stop='1644543467862'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='7c2f4f5f-e87b-45d5-be65-946485f37d65-attachment.png' type='image/png' size='192157'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element click intercepted: Element &lt;h5>...&lt;/h5> is not clickable at point (108, 669). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" srcdoc="" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true">&lt;/iframe>
+                  (Session info: chrome=98.0.4758.82)</message>
+                <stack-trace>Backtrace:
+                	Ordinal0 [0x00597AC3+2587331]
+                	Ordinal0 [0x0052ADD1+2141649]
+                	Ordinal0 [0x00423BB8+1063864]
+                	Ordinal0 [0x004565FF+1271295]
+                	Ordinal0 [0x00454849+1263689]
+                	Ordinal0 [0x0045248B+1254539]
+                	Ordinal0 [0x00451289+1249929]
+                	Ordinal0 [0x00446DD3+1207763]
+                	Ordinal0 [0x0046868C+1345164]
+                	Ordinal0 [0x004467A4+1206180]
+                	Ordinal0 [0x004687E4+1345508]
+                	Ordinal0 [0x00478A0A+1411594]
+                	Ordinal0 [0x004684A6+1344678]
+                	Ordinal0 [0x004453F6+1201142]
+                	Ordinal0 [0x004462E6+1204966]
+                	GetHandleVerifier [0x0073DF22+1680738]
+                	GetHandleVerifier [0x007F0DBC+2413564]
+                	GetHandleVerifier [0x0062D151+563089]
+                	GetHandleVerifier [0x0062BF13+558419]
+                	Ordinal0 [0x0053081E+2164766]
+                	Ordinal0 [0x00535508+2184456]
+                	Ordinal0 [0x00535650+2184784]
+                	Ordinal0 [0x0053F5BC+2225596]
+                	BaseThreadInitThunk [0x757AFA29+25]
+                	RtlGetAppContainerNamedObjectPath [0x77207A9E+286]
+                	RtlGetAppContainerNamedObjectPath [0x77207A6E+238]
+                </stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

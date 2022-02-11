@@ -1,0 +1,94 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1644542279028' stop='1644542290367'>
+    <name>Elements</name>
+    <title>Elements</title>
+    <test-cases>
+        <test-case start='1644542279041' status='broken' stop='1644542290366'>
+            <name>open Elements</name>
+            <title>open Elements</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-98.0.4758.82'/>
+            </parameters>
+            <steps>
+                <step start='1644542279044' status='passed' stop='1644542279236'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='a93855e2-45d4-4422-bded-58724232b9d3-attachment.json' type='application/json' size='58'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644542279258' status='passed' stop='1644542283877'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='547c1463-c797-45c3-9097-8749698d83c2-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644542285879' status='passed' stop='1644542285898'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='181ecd8d-2587-4b2b-8876-cf370b7d1b0b-attachment.json' type='application/json' size='66'/>
+                        <attachment title='Response' source='b448f355-f5f9-4ae1-9b2c-0af931523ff3-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644542285904' status='broken' stop='1644542290366'>
+                    <name>POST /session/:sessionId/element/bed3eb6e-c8b8-445a-925b-766c244ef1d4/click</name>
+                    <title>POST /session/:sessionId/element/bed3eb6e-c8b8-445a-925b-766c244ef1d4/click</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1644542290152' status='passed' stop='1644542290365'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='bd17c3b8-3006-478f-84ec-db7cb209cd4e-attachment.png' type='image/png' size='235568'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element click intercepted: Element &lt;h5>...&lt;/h5> is not clickable at point (153, 677). Other element would receive the click: &lt;div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...&lt;/div>
+                  (Session info: chrome=98.0.4758.82)</message>
+                <stack-trace>Backtrace:
+                	Ordinal0 [0x00ED7AC3+2587331]
+                	Ordinal0 [0x00E6ADD1+2141649]
+                	Ordinal0 [0x00D63BB8+1063864]
+                	Ordinal0 [0x00D965FF+1271295]
+                	Ordinal0 [0x00D94849+1263689]
+                	Ordinal0 [0x00D9248B+1254539]
+                	Ordinal0 [0x00D91289+1249929]
+                	Ordinal0 [0x00D86DD3+1207763]
+                	Ordinal0 [0x00DA868C+1345164]
+                	Ordinal0 [0x00D867A4+1206180]
+                	Ordinal0 [0x00DA87E4+1345508]
+                	Ordinal0 [0x00DB8A0A+1411594]
+                	Ordinal0 [0x00DA84A6+1344678]
+                	Ordinal0 [0x00D853F6+1201142]
+                	Ordinal0 [0x00D862E6+1204966]
+                	GetHandleVerifier [0x0107DF22+1680738]
+                	GetHandleVerifier [0x01130DBC+2413564]
+                	GetHandleVerifier [0x00F6D151+563089]
+                	GetHandleVerifier [0x00F6BF13+558419]
+                	Ordinal0 [0x00E7081E+2164766]
+                	Ordinal0 [0x00E75508+2184456]
+                	Ordinal0 [0x00E75650+2184784]
+                	Ordinal0 [0x00E7F5BC+2225596]
+                	BaseThreadInitThunk [0x757AFA29+25]
+                	RtlGetAppContainerNamedObjectPath [0x77207A9E+286]
+                	RtlGetAppContainerNamedObjectPath [0x77207A6E+238]
+                </stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
