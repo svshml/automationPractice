@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1644544846911' stop='1644544855415'>
+    <name>Elements</name>
+    <title>Elements</title>
+    <test-cases>
+        <test-case start='1644544846912' status='broken' stop='1644544855414'>
+            <name>open Elements</name>
+            <title>open Elements</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-98.0.4758.82'/>
+            </parameters>
+            <steps>
+                <step start='1644544846923' status='passed' stop='1644544855171'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='ea9cd736-ec6b-472c-9df2-0c4904470368-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644544855174' status='passed' stop='1644544855195'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='0f719229-6b67-42aa-9bd5-30221f03841a-attachment.json' type='application/json' size='66'/>
+                        <attachment title='Response' source='6fb80aee-4a28-42b7-88dd-0c96d32f6af7-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644544855201' status='passed' stop='1644544855404'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='6c51ed17-5adf-4ed6-ab6f-990152baf0d9-attachment.png' type='image/png' size='184736'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>elem[prop] is not a function</message>
+                <stack-trace>TypeError: elem[prop] is not a function
+                    at C:\Users\vsebu\Desktop\automationPractice\node_modules\@wdio\utils\build\shim.js:253:38
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at Context.&lt;anonymous> (C:\Users\vsebu\Desktop\automationPractice\test\specs\/example.e2e.js:9:13)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

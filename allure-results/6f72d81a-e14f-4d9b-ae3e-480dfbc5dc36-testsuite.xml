@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1644543531306' stop='1644543536080'>
+    <name>Elements</name>
+    <title>Elements</title>
+    <test-cases>
+        <test-case start='1644543531307' status='broken' stop='1644543536065'>
+            <name>open Elements</name>
+            <title>open Elements</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-98.0.4758.82'/>
+            </parameters>
+            <steps>
+                <step start='1644543531314' status='passed' stop='1644543535820'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='06261295-43e3-45ad-a35c-18c9a975de65-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644543535821' status='broken' stop='1644543536065'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1644543535823' status='passed' stop='1644543536059'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='7c8f089f-93c0-4d14-905f-39904a79157b-attachment.json' type='application/json' size='66'/>
+                                <attachment title='Screenshot' source='b6ebd325-932a-412c-9de7-1b56d1f5dd91-attachment.png' type='image/png' size='257431'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='a02206a5-02ed-43bc-acef-137a855c7e36-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>browser.getElementLocationInView is not a function</message>
+                <stack-trace>TypeError: browser.getElementLocationInView is not a function
+                    at Context.&lt;anonymous> (C:\Users\vsebu\Desktop\automationPractice\test\specs\/example.e2e.js:9:27)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

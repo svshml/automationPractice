@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1644542906499' stop='1644542911956'>
+    <name>Elements</name>
+    <title>Elements</title>
+    <test-cases>
+        <test-case start='1644542906499' status='broken' stop='1644542911943'>
+            <name>open Elements</name>
+            <title>open Elements</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-98.0.4758.82'/>
+            </parameters>
+            <steps>
+                <step start='1644542906504' status='passed' stop='1644542911725'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='5ee6728d-6eb1-43eb-b848-f0bf7c1c92de-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1644542911727' status='broken' stop='1644542911943'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1644542911731' status='passed' stop='1644542911936'>
+                            <name>POST /session/:sessionId/element</name>
+                            <title>POST /session/:sessionId/element</title>
+                            <attachments>
+                                <attachment title='Request' source='c0f15927-b97e-4129-8d9f-59185a95a0d3-attachment.json' type='application/json' size='66'/>
+                                <attachment title='Screenshot' source='0f851a88-6306-48de-9502-b52d48c2a9dd-attachment.png' type='image/png' size='190813'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='8ad2901c-50aa-440c-9c07-7a5b4b322e9b-attachment.json' type='application/json' size='83'/>
+            </attachments>
+            <failure>
+                <message>browser.scrollIntoView is not a function</message>
+                <stack-trace>TypeError: browser.scrollIntoView is not a function
+                    at Context.&lt;anonymous> (C:\Users\vsebu\Desktop\automationPractice\test\specs\/example.e2e.js:9:27)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
