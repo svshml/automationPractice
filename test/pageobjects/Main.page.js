@@ -2,7 +2,7 @@ const Page = require('./Page')
 
 class MainPage extends Page {
     get elementsLabel() {
-        return $('(//div[@class="card-up"])[1]');
+        return $('//h5[contains(.,"Element")]');
     }
 
     open() {
