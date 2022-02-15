@@ -5,8 +5,20 @@ class ElementsPage extends Page {
         return $('//div[@class="main-header"]');
     }
 
-    get TextBoxMenuItem() {
+    get textBoxMenuItem() {
         return $( '//li[contains(.,"Text Box")]');
+    }
+
+    get checkBoxMenuItem() {
+        return $( '//li[contains(.,"Check Box")]');
+    }
+
+    get radioButtonsMenuItem() {
+        return $( '//li[contains(.,"Rudio Buttons")]');
+    }
+
+    get webTablesMenuItem() {
+        return $( '//li[contains(.,"Web Tables")]');
     }
 
     open() {
