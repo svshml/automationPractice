@@ -22,7 +22,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/TextBox.spec.js'
+        './test/specs/**.spec.js'
     ],
     // Patterns to exclude.
     exclude: [

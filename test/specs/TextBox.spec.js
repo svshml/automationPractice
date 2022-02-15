@@ -2,14 +2,14 @@ const ElementsPage = require("../pageobjects/Elements.page");
 const TextBoxPage =require("../pageobjects/TextBox.page");
 const data =require("../test_data/testData");
 
-describe('Elements', () => {
+describe('Text Box', () => {
     before( async () => {
         await browser.maximizeWindow();
         await ElementsPage.open();
     });
 
     it ('User can navigate to [Text Box] page', async () => {
-            await ElementsPage.TextBoxMenuItem.click();
+            await ElementsPage.textBoxMenuItem.click();
             await expect(TextBoxPage.pageLabel).toHaveText("Text Box");
     });
 
