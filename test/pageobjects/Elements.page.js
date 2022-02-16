@@ -13,8 +13,8 @@ class ElementsPage extends Page {
         return $( '//li[contains(.,"Check Box")]');
     }
 
-    get radioButtonsMenuItem() {
-        return $( '//li[contains(.,"Rudio Buttons")]');
+    get radioButtonMenuItem() {
+        return $( '//li[contains(.,"Radio Button")]');
     }
 
     get webTablesMenuItem() {
