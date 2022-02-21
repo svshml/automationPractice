@@ -13,5 +13,6 @@ module.exports = {
     checkBox:{ result1: "You have selected :\nhome\ndesktop\nnotes\ncommands\ndocuments\nworkspace\nreact\n" +
             "angular\nveu\noffice\npublic\nprivate\nclassified\ngeneral\ndownloads\nwordFile\nexcelFile",
         result2: "You have selected :\nnotes\nreact\ndownloads\nwordFile\nexcelFile"
-    }
+    },
+
 }
