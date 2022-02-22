@@ -152,9 +152,9 @@ describe('Elements', () => {
         });
 
         it('User can create a new record with valid data', async () => {
-            const amountRowsBefore = await WebTablesPage.amountRows.length;
+            const amountRowsBefore = await WebTablesPage.amountRowsWithData.length;
             await addRecord("Caty","Mierra", "20", "cm@google.com", "0", "HR");
-            const amountRowsAfter = await WebTablesPage.amountRows.length;
+            const amountRowsAfter = await WebTablesPage.amountRowsWithData.length;
             const diff = amountRowsAfter - amountRowsBefore;
             await expect(diff).toEqual(1);
             await expect(await textFromRow("Caty")).toEqual("Caty,Mierra,20,cm@google.com,0,HR")
@@ -273,6 +273,81 @@ describe('Elements', () => {
         it('User can delete a record ', async () => {
             await WebTablesPage.deleteRowWithText("Katy").click();
             await expect(WebTablesPage.rowWithText("Katy")).not.toExist();
+        });
+
+        describe('checking pagination', () => {
+
+            it('creating additional 5 records', async () => {
+               const amountRowsBefore = await WebTablesPage.amountRowsWithData.length;
+                 for(let i =1; i< 6; i++) {
+                    await addRecord("Caty", "Mierra", "20",
+                        `${i}cm@google.com`, "0", "HR");
+                 }
+               const amountRowsAfter = await WebTablesPage.amountRowsWithData.length;
+               const diff = amountRowsAfter - amountRowsBefore;
+               await expect(diff).toEqual(5);
+            });
+
+
+            it ('User can change amount of rows to 20 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("20 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(20);
+            });
+
+            it ('User can change amount of rows to 5 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("5 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(5);
+            });
+
+            it ('User can go to the next page', async () => {
+                await WebTablesPage.nextButton.click();
+                await expect(await WebTablesPage.amountRowsWithData.length).toEqual(3);
+            });
+
+            it ('User can go to the previous page', async () => {
+                await WebTablesPage.previousButton.click();
+                await expect(await WebTablesPage.amountRowsWithData.length).toEqual(5);
+            });
+
+            it ('User can change amount of rows to 25 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("25 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(25);
+            });
+
+            it ('User can change amount of rows to 50 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("50 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(50);
+            });
+
+            it ('User can change amount of rows to 100 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("100 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(100);
+            });
+
+            it ('User can change amount of rows to 10 per page', async () => {
+                await WebTablesPage.selectRowPerPage.scrollIntoView();
+                await WebTablesPage.selectRowPerPage.click();
+                await WebTablesPage.selectRowPerPage.selectByVisibleText("10 rows");
+                await expect(await WebTablesPage.rowsOnPage.length).toEqual(10);
+            });
+
+            it('deleting records created for tests ', async () => {
+              while (await WebTablesPage.rowWithText("Caty").length > 0){
+                 await WebTablesPage.deleteRowWithText("Caty").click();
+             }
+              await expect(WebTablesPage.rowWithText("Caty")).not.toExist();
+            });
+
         });
 
     })
