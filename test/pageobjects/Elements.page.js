@@ -21,6 +21,10 @@ class ElementsPage extends Page {
         return $( '//li[contains(.,"Web Tables")]');
     }
 
+    get buttonsMenuItem() {
+        return $( '//li[contains(.,"Buttons")]');
+    }
+
     open() {
         return super.open('elements');
     }
