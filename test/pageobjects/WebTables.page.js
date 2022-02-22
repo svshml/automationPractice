@@ -41,11 +41,15 @@ class WebTablesPage extends Page {
         return $$(`//div[@class="rt-tr-group"and contains(.,"${text}")]`);
     }
 
+    get rowsOnPage(){
+        return $$(`//div[@class="rt-tr-group"]`);
+    }
+
     allColumnInRowWithText(text){
         return $$(`//div[contains(@class,"rt-tr ")and contains(.,"${text}")]/div`);
     }
 
-    get amountRows() {
+    get amountRowsWithData() {
         return $$( '//div[contains(@class, "rt-tr")]/div[contains(text(),.)]/parent::div');
     }
 
@@ -67,6 +71,18 @@ class WebTablesPage extends Page {
 
     get searchField() {
         return $('//input[@id="searchBox"]');
+    }
+
+    get selectRowPerPage() {
+      return $('//select[@aria-label="rows per page"]');
+    }
+
+    get nextButton() {
+        return $('//button[contains(.,"Next")]');
+    }
+
+    get previousButton() {
+        return $('//button[contains(.,"Previous")]');
     }
 
     open() {
