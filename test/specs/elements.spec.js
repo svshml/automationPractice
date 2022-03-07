@@ -250,25 +250,28 @@ describe('Elements', () => {
         });
 
         it('User can change data in a record using valid data', async () => {
-            await WebTablesPage.editRowWithText("Caty").click();
+            const myRow = WebTablesPage.editRowWithText("Caty");
+            await myRow.click();
             await clearInputValue(WebTablesPage.firstNameForm);
             await WebTablesPage.firstNameForm.setValue("Katy");
-            await clearInputValue(WebTablesPage.ageForm);
-            await WebTablesPage.ageForm.setValue("30");
+            await clearInputValue(WebTablesPage.emailForm);
+            await WebTablesPage.emailForm.setValue("cm2@google.com");
             await clearInputValue(WebTablesPage.salaryForm);
             await WebTablesPage.salaryForm.setValue("150000");
             await WebTablesPage.submitForm.click();
-            await expect(await textFromRow("Katy")).toEqual("Katy,Mierra,30,cm@google.com,150000,HR")
+            await expect(await textFromRow("Katy")).toEqual("Katy,Mierra,20,cm2@google.com,150000,HR")
         });
 
         it('User can delete a record ', async () => {
-            await WebTablesPage.deleteRowWithText("Katy").click();
+            const myRow = WebTablesPage.deleteRowWithText("Katy");
+            await myRow.click();
             await expect(WebTablesPage.rowWithText("Katy")).not.toExist();
         });
 
         describe('checking pagination', () => {
 
             it('creating additional 5 records', async () => {
+                await browser.pause(500);
                 const amountRowsBefore = await WebTablesPage.amountRowsWithData.length;
                 for (let i = 1; i < 6; i++) {
                     await addRecord("Caty", "Mierra", "20",
@@ -303,26 +306,26 @@ describe('Elements', () => {
                 await expect(await WebTablesPage.amountRowsWithData.length).toEqual(5);
             });
 
-            it('User can change amount of rows to 25 per page', async () => {
-                await WebTablesPage.selectRowPerPage.scrollIntoView();
-                await WebTablesPage.selectRowPerPage.click();
-                await WebTablesPage.selectRowPerPage.selectByVisibleText("25 rows");
-                await expect(await WebTablesPage.rowsOnPage.length).toEqual(25);
-            });
+            // it('User can change amount of rows to 25 per page', async () => {
+            //     await WebTablesPage.selectRowPerPage.scrollIntoView();
+            //     await WebTablesPage.selectRowPerPage.click();
+            //     await WebTablesPage.selectRowPerPage.selectByVisibleText("25 rows");
+            //     await expect(await WebTablesPage.rowsOnPage.length).toEqual(25);
+            // });
 
-            it('User can change amount of rows to 50 per page', async () => {
-                await WebTablesPage.selectRowPerPage.scrollIntoView();
-                await WebTablesPage.selectRowPerPage.click();
-                await WebTablesPage.selectRowPerPage.selectByVisibleText("50 rows");
-                await expect(await WebTablesPage.rowsOnPage.length).toEqual(50);
-            });
+            // it('User can change amount of rows to 50 per page', async () => {
+            //     await WebTablesPage.selectRowPerPage.scrollIntoView();
+            //     await WebTablesPage.selectRowPerPage.click();
+            //     await WebTablesPage.selectRowPerPage.selectByVisibleText("50 rows");
+            //     await expect(await WebTablesPage.rowsOnPage.length).toEqual(50);
+            // });
 
-            it('User can change amount of rows to 100 per page', async () => {
-                await WebTablesPage.selectRowPerPage.scrollIntoView();
-                await WebTablesPage.selectRowPerPage.click();
-                await WebTablesPage.selectRowPerPage.selectByVisibleText("100 rows");
-                await expect(await WebTablesPage.rowsOnPage.length).toEqual(100);
-            });
+            // it('User can change amount of rows to 100 per page', async () => {
+            //     await WebTablesPage.selectRowPerPage.scrollIntoView();
+            //     await WebTablesPage.selectRowPerPage.click();
+            //     await WebTablesPage.selectRowPerPage.selectByVisibleText("100 rows");
+            //     await expect(await WebTablesPage.rowsOnPage.length).toEqual(100);
+            // });
 
             it('User can change amount of rows to 10 per page', async () => {
                 await WebTablesPage.selectRowPerPage.scrollIntoView();
@@ -351,6 +354,7 @@ describe('Elements', () => {
         });
 
          it('User can click on the button "Double Click Me"', async () => {
+            await browser.pause(500);
             await ButtonsPage.doubleClickButton.doubleClick();
             await expect(ButtonsPage.resultDoubleClick).toHaveTextContaining("You have done a double click");
          });
