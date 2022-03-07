@@ -10,7 +10,8 @@ module.exports = {
             "Permananet Address :711 Oval Drive, Fort Collins, CO 80521"
     },
 
-    checkBox:{ result1: "You have selected :\nhome\ndesktop\nnotes\ncommands\ndocuments\nworkspace\nreact\n" +
+    checkBox:{
+        result1: "You have selected :\nhome\ndesktop\nnotes\ncommands\ndocuments\nworkspace\nreact\n" +
             "angular\nveu\noffice\npublic\nprivate\nclassified\ngeneral\ndownloads\nwordFile\nexcelFile",
         result2: "You have selected :\nnotes\nreact\ndownloads\nwordFile\nexcelFile"
     },
